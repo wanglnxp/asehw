@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Toy System</title>
+  <link rel="stylesheet" type="text/css" href="../static/main.css">
 </head>
 <body>
-  <h1>Toy System</h1>
+  <h1>Log for Everyone</h1>
 
-  <form method="POST" action="/add">
+  <form class="form1" method="POST" action="/add">
   	User name:<br>
 	<input type="text" name="name">
-	<br>
+	<br><br>
 	Message:<br>
-	<input type="text" name="message">
+  <textarea name="message"></textarea>
 	<br><br>
 	<input type="submit" value="Store">
   </form>
   <br><br>
-  <form action="/record">
-  	Find out what people said:<br>
-	<input type="submit" value="GO!">
+  <form class="back" action="/record">
+  	Find out what people said:
+	<input type="submit" value="GO">
   </form>
 </body>
 </html>

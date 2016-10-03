@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Toy System</title>
+  <link rel="stylesheet" type="text/css" href="../static/main.css">
 </head>
 <body>
-  <h1>Toy System</h1>
-  <h5>Name    Message:</h5>
- 
-    <div>
-    {% for n in info %}
-    <div>{{n}}</div>
+  <h1>Log for Everyone</h1>
+  <table>
+    <tr>
+      <th>
+        <h3>Name</h3>
+      </th>
+      <th>
+        <h3>Message</h3>
+      </th>
+    </tr>
+    {% for item in info %}
+    <tr>
+      <td>{{item[0]}}</td>
+      <td>{{item[1]}}</td>
+    </tr>
     {% endfor %}
-    </div>
+  </table>
 
-    <br><br>
-	<form action="/">
-  	Back to Homepage:<br>
-	<input type="submit" value="Home">
+  <br><br>
+	<form class="back" action="/">
+  	Back to Homepage: 
+	<input type="submit" value="GO">
   </form>
 
 </body>
