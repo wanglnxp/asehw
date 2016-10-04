@@ -30,15 +30,15 @@ table {
 }
 
 th {
-    height: 50px;
+    height: 40px;
 }
 
 th, td {
-    padding: 5px 30px 0 0;
+    padding: 3px 25px 3px 10px;
     text-align: left;
 }
 
-tr:hover {
+tr.body:hover {
 	background-color: #B5BCC6;
 }
 

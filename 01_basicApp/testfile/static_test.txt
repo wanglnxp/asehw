@@ -1,16 +1,17 @@
-pylint main.py 
+pylint main.py
 
 No config file found, using default configuration
 ************* Module main
-W: 29,11: Catching too general exception Exception (broad-except)
-W: 43,11: Catching too general exception Exception (broad-except)
-W: 78,11: Catching too general exception Exception (broad-except)
-W: 94,11: Catching too general exception Exception (broad-except)
+W: 33,11: Catching too general exception Exception (broad-except)
+W: 47,11: Catching too general exception Exception (broad-except)
+W: 82,11: Catching too general exception Exception (broad-except)
+W: 98,11: Catching too general exception Exception (broad-except)
+W:127,11: Catching too general exception Exception (broad-except)
 
 
 Report
 ======
-48 statements analysed.
+59 statements analysed.
 
 Statistics by type
 ------------------
@@ -24,7 +25,7 @@ Statistics by type
 +---------+-------+-----------+-----------+------------+---------+
 |method   |0      |0          |=          |0           |0        |
 +---------+-------+-----------+-----------+------------+---------+
-|function |6      |6          |=          |100.00      |0.00     |
+|function |7      |6          |+1.00      |100.00      |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
 
 
@@ -44,13 +45,13 @@ Raw metrics
 +----------+-------+------+---------+-----------+
 |type      |number |%     |previous |difference |
 +==========+=======+======+=========+===========+
-|code      |57     |50.00 |57       |=          |
+|code      |71     |50.71 |57       |+14.00     |
 +----------+-------+------+---------+-----------+
-|docstring |31     |27.19 |31       |=          |
+|docstring |35     |25.00 |31       |+4.00      |
 +----------+-------+------+---------+-----------+
-|comment   |3      |2.63  |3        |=          |
+|comment   |6      |4.29  |3        |+3.00      |
 +----------+-------+------+---------+-----------+
-|empty     |23     |20.18 |23       |=          |
+|empty     |28     |20.00 |23       |+5.00      |
 +----------+-------+------+---------+-----------+
 
 
@@ -78,7 +79,7 @@ Messages by category
 +-----------+-------+---------+-----------+
 |refactor   |0      |0        |=          |
 +-----------+-------+---------+-----------+
-|warning    |4      |4        |=          |
+|warning    |5      |4        |+1.00      |
 +-----------+-------+---------+-----------+
 |error      |0      |0        |=          |
 +-----------+-------+---------+-----------+
@@ -91,11 +92,11 @@ Messages
 +-------------+------------+
 |message id   |occurrences |
 +=============+============+
-|broad-except |4           |
+|broad-except |5           |
 +-------------+------------+
 
 
 
 Global evaluation
 -----------------
-Your code has been rated at 9.17/10 (previous run: 9.17/10, +0.00)
+Your code has been rated at 9.15/10 (previous run: 9.17/10, -0.01)

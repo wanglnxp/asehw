@@ -1,0 +1,16 @@
+Testing started at 5:35 PM ...
+
+Test Case 1
+User asdfw add message asdfw to the database
+Find information in the database
+successfully deleted the message
+
+Test Case 2
+User find add message find to the database
+Find information in the database
+successfully deleted the message
+
+Test Case 3
+User fiw33 add message fiw33 to the database
+Find information in the database
+successfully deleted the message

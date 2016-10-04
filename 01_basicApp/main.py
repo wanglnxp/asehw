@@ -3,13 +3,17 @@ This is Toy System for homework 2
 The website can store user message and retrive all of them
 """
 
-import os
+# import os
 # import traceback
+import sys
 from sqlalchemy import create_engine
 from flask import Flask, request, render_template, g, redirect
 
-TMPL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
-APP = Flask(__name__, template_folder=TMPL_DIR)
+
+# TMPL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
+# APP = Flask(__name__, template_folder=TMPL_DIR)
+
+APP = Flask(__name__)
 
 DATABASEURI = "postgresql://Linnan@localhost:5432/mydb"
 ENGINE = create_engine(DATABASEURI)
@@ -107,6 +111,27 @@ def record():
     return render_template("record.html", **locals())
 
 
+@APP.route('/delete', methods=['POST'])
+def delete():
+    """
+    This is method only for test purpose to delete test case
+    :return: delete info
+    """
+    name = request.form['name']
+    message = request.form['message']
+
+    try:
+        newcurs = g.conn.execute("""DELETE FROM record
+        WHERE record.user_name = %s AND record.message = %s;""", name, message)
+        newcurs.close()
+    except Exception:
+        print "can not write record to database"
+        return redirect('/error')
+
+    return "successfully deleted the message"
+
 if __name__ == "__main__":
     # check whether the file is called directly, otherwise do not run
+    reload(sys)
+    sys.setdefaultencoding('utf8')
     APP.run(debug=True)
